@@ -1,0 +1,13 @@
+#RUNNING the server
+
+source bin/activate
+pip install -r requirements.txt
+python manage.py runserver
+
+#RUNNING application
+#create export file, from AEMO_data.csv  to export_dataframe
+python load_file.py
+#login to admin console #user/passwd=aemo/aemoaemo
+run cvs import export_dataframe.csv
+
+values can be read from Meter table.
